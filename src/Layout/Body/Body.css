@@ -1,3 +1,15 @@
+.login{
+    background-color: bisque;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -7,7 +19,6 @@
     justify-content: center;
     align-content: center;
     margin: auto;
-    
 }
 input {
     margin-bottom: 50px;
