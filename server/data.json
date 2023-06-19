@@ -1,12 +1,21 @@
 {
-  "posts": [
+  "comments": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "plantsName": "장미"
+    },
+    {
+      "id": 2,
+      "plantsName": "국화"
+    },
+    {
+      "id": 3,
+      "plantsName": "몬스테라"
     }
   ],
-  "comments": [
+
+
+  "recommendResult ": [
     {
       "id": 1,
       "body": "some comment",

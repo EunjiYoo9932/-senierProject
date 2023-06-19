@@ -44,25 +44,27 @@ function Login() {
 
     return (
         <div className='login'>
-        <form className='loginForm' onSubmit={handleSubmit(onSubmit)}>
-        <input
-            name='userEmail'
-            placeholder='이메일'
-            {...register('userEmail')}
-          // register에 포함된 구문임 onChange={(e)=> setUserEmail(e.target.value)}
-        />
-        {errors.userEmail && <p>{errors.userEmail.message}</p>}
-        <input 
-            name='userPasswd'
-            type='password'
-            placeholder='비밀번호'
-            {...register('userPasswd')}
-        />
-        {errors.userPasswd && <p>{errors.userPasswd.message}</p>}
+            <form className='loginForm' onSubmit={handleSubmit(onSubmit)}>
+            <img className="grupImg" alt="grupImg" src="img/GRUP로고.png" />
+            <input
+                name='userEmail'
+                placeholder='이메일'
+                {...register('userEmail')}
+            // register에 포함된 구문임 onChange={(e)=> setUserEmail(e.target.value)}
+            />
+            {errors.userEmail && <p>{errors.userEmail.message}</p>}
+            <input 
+                name='userPasswd'
+                type='password'
+                placeholder='비밀번호'
+                {...register('userPasswd')}
+            />
+            {errors.userPasswd && <p>{errors.userPasswd.message}</p>}
 
-        <input className='loginButton' type="button" value="로그인" onClick={handleSubmit(onSubmit)} />
+            <input className='loginButton' type="button" value="로그인" onClick={handleSubmit(onSubmit)} />
 
-        </form>
+            </form>
+            <div className='signIn'>회원가입</div>
         </div>
     );
 }
