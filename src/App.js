@@ -22,6 +22,7 @@ function App() {
           <div id="main-content" className="flex-1">
             <Routes>
               <Route path='/' element={<Recommend/>}></Route>
+              <Route path='/Recommend' element={<Recommend/>}></Route>
               <Route path='/Login' element={<Login/>}></Route>
               <Route path='/Crawling' element={<Crawling/>}></Route>
               <Route path='/GetTest' element={<GetTest/>}></Route>
