@@ -12,19 +12,21 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
             <Container>
-                <Navbar.Brand style={{ fontSize: '22px' }}as={Link} to="/">
+                <Navbar.Brand style={{ fontSize: '22px' }} as={Link} to="/">
                     <img className="headerGrupImg" alt="grupImg" src="img/GRUP로고.png" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav className="me-auto mx-auto">
                         <Nav.Link style={{ fontSize: '20px', color:'black'}}href="#features">HOME</Nav.Link>
-                        <Nav.Link style={{ fontSize: '20px', color:'black' }}href="#pricing">AI 식물 추천</Nav.Link>
+                        <Nav.Link style={{ fontSize: '20px', color:'black' }}as={Link} to="/Recommend">AI 식물 추천</Nav.Link>
+                        
+                        <Nav.Link style={{ fontSize: '20px', color:'black' }}as={Link} to="/Introduce">Introduce</Nav.Link>
                         <NavDropdown title={<span style={{ fontSize: '20px', color: '#c0eb75' }}>게시판</span>} id="collasible-nav-dropdown">
                             <NavDropdown.Item style={{ color: 'black' }} href="#action/3.1">고민게시판</NavDropdown.Item>
                             <NavDropdown.Item style={{ color: 'black' }} href="#action/3.2">
                                 Another action
                             </NavDropdown.Item>
-                            <NavDropdown.Item style={{ color: 'black' }} href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item style={{ color: 'black' }} as={Link} to="/Introduce">Introduce</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item style={{ color: 'black' }} href="#action/3.4">
                                 Separated link
@@ -32,8 +34,8 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">로그인</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        <Nav.Link as={Link} to="/Login">로그인</Nav.Link>
+                        <Nav.Link eventKey={2} as={Link} to="/SignIn">
                         회원가입
                         </Nav.Link>
                     </Nav>

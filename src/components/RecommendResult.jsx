@@ -59,22 +59,34 @@ function RecommendResult() {
                 <><div className='recommendResultWi' key={comments.id}>{comments.id}위</div>
                 <div className='recommendResultRanking' key={comments.id} onClick={() => openModal(comments.plantsName)}>{comments.plantsName}</div></>
             ))}
-            <button onClick={() => navigate('/Recommend')}>질문지로</button>
+            <button className='recommendResultButton' onClick={() => navigate('/Recommend')}>질문지로</button>
 
 
             <Modal className='recommendResultModal' isOpen={modalIsOpen}>
-                <div>Selected Plant: {selectedPlants.Name}</div>
-                {selectedPlants.map((plant) => (
-                    <div key={plant.id}>
-                        사진:{plant.plantsPic}
-                        난이도: {plant.plantsLevel}
-                        물: {plant.plantsWater}
-                        효과: {plant.plantsEffect}
-                        주의점: {plant.plantsNotice}
-                        
-
-                    </div>
-                ))}
+                {/* <div>Selected Plant: {selectedPlants.plantsName}</div> */}
+                {selectedPlants.map((plant) => {
+                    if (plant.plantsName === selectedPlantName) {
+                        return (
+                            <div key={plant.id}>
+                            <ul className='plantExplain'>
+                                <li className='plantExplainTitle'>식물명</li>
+                                <li>{plant.plantsName}</li>
+                                <li className='plantExplainTitle'>사진</li>
+                                <li>{plant.plantsPic}</li>
+                                <li className='plantExplainTitle'>난이도</li>
+                                <li >{plant.plantsLevel}</li>
+                                <li className='plantExplainTitle'>물</li>
+                                <li>{plant.plantsWater}</li>
+                                <li className='plantExplainTitle'>효과</li>
+                                <li>{plant.plantsEffect}</li>
+                                <li className='plantExplainTitle'>주의점</li>
+                                <li>{plant.plantsNotice}</li>
+                            </ul>
+                            </div>
+                        );
+                        }
+                        return null;
+                    })}
                 <button className='modalCloseButton' onClick={closeModal}>close</button>
             </Modal>
         </div>

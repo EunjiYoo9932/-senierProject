@@ -43,9 +43,12 @@ app.get('/api/submitResults', (req, res)=> {
 })
 
 app.post('/api/submitResults', (req,res)=> {
-    const {answer} = req.body;
+    const {answerTemperature, answerLight, answerWater, answerLevel} = req.body;
     submitResults.push({
-        answer
+        answerTemperature, 
+        answerLight, 
+        answerWater, 
+        answerLevel
     });
     res.send('success')
 });

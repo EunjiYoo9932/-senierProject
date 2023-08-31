@@ -1,0 +1,8 @@
+.crawlingResult{
+    display: flex;
+}
+
+.crawlingForm{
+    width: 50%;
+    text-align: center;
+}

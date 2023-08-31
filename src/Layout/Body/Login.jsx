@@ -4,11 +4,13 @@ import { useForm } from 'react-hook-form';
 import './Login.css'; 
 import {useEffect, useState} from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 const SERVER_URL = 'http://localhost:3002/api/login';
 
 
 function Login() {
-
+    const navigate = useNavigate();
     const axiosData = async() => {
         const response = await axios.post(SERVER_URL);
         console.log(response);
@@ -18,8 +20,16 @@ function Login() {
     },[]);
 
     const onSubmit = async(data) => {
-        await axios.post(SERVER_URL, {data}); 
-        axiosData();
+        try {
+            const response = await axios.post(SERVER_URL, data);
+            console.log(response);
+            // 사용자 정보가 맞다면 홈으로 이동
+            if (response.data.success) {
+                navigate('/Recommend');
+            }
+        } catch (error) {
+            console.error(error);
+        }
     }
     const formSchema = yup.object({
         userEmail: yup
@@ -34,7 +44,6 @@ function Login() {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm({
         mode: 'onChange',

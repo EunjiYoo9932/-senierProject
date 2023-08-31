@@ -1,11 +1,11 @@
 {
   "comments": [
-    { 
-      "id":0,
-      "temperature":5,
-      "light":4,
-      "water":3,
-      "level":3
+    {
+      "id": 0,
+      "temperature": 5,
+      "light": 4,
+      "water": 3,
+      "level": 3
     },
     {
       "id": 1,
@@ -24,29 +24,86 @@
     {
       "id": 1,
       "plantsName": "장미",
-      "plantsPic" : "사진넣기",
+      "plantsPic": "사진넣기",
       "plantsLevel": "키우기 쉬운편입니다",
       "plantsWater": "물을 매우 좋아합니다",
       "plantsEffect": "공기정화에 탁월",
-      "plantsNotice":"공기정화에 탁월"
+      "plantsNotice": "공기정화에 탁월"
     },
-    {      
+    {
       "id": 2,
       "plantsName": "국화",
-      "plantsPic" : "사진넣기",
+      "plantsPic": "사진넣기",
       "plantsLevel": "키우기 쉬운편입니다",
       "plantsWater": "물을 매우 좋아합니다",
       "plantsEffect": "공기정화에 탁월",
-      "plantsNotice":"공기정화에 탁월"
+      "plantsNotice": "공기정화에 탁월"
     },
     {
       "id": 3,
       "plantsName": "몬스테라",
-      "plantsPic" : "사진넣기",
+      "plantsPic": "사진넣기",
       "plantsLevel": "키우기 쉬운편입니다",
       "plantsWater": "물을 매우 좋아합니다",
       "plantsEffect": "공기정화에 탁월",
-      "plantsNotice":"공기정화에 탁월"
+      "plantsNotice": "공기정화에 탁월"
+    }
+  ],
+  "selectedPlantsData": {
+    "id": 1,
+    "plantsName": "장미",
+    "plantsPic": "사진넣기",
+    "plantsLevel": "키우기 쉬운편입니다",
+    "plantsWater": "물을 매우 좋아합니다",
+    "plantsEffect": "공기정화에 탁월",
+    "plantsNotice": "공기정화에 탁월"
+  },
+  "crawlingData": [
+    {
+      "id": 1,
+      "storeName": "이슬이네꽃집",
+      "price": 10000,
+      "imageUrl": "사진"
+    },
+    {
+      "id": 2,
+      "storeName": "서이슬이네꽃집",
+      "price": 8500,
+      "imageUrl": "사진"
+    },
+    {
+      "id": 3,
+      "storeName": "유이슬이네꽃집",
+      "price": 8000,
+      "imageUrl": "사진"
+    },
+    {
+      "searchName": "fssfs",
+      "id": 4
+    },
+    {
+      "searchName": "DFAS",
+      "id": 5
+    },
+    {
+      "searchName": "ㄴㅇㄻㄴㄹ",
+      "id": 6
+    },
+    {
+      "searchName": "ㅇㄹㄴㅁ",
+      "id": 7
+    },
+    {
+      "searchName": "fasf",
+      "id": 8
+    },
+    {
+      "searchName": "fasf",
+      "id": 9
+    },
+    {
+      "searchName": "fasf",
+      "id": 10
     }
   ],
   "profile": {

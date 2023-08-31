@@ -7,11 +7,13 @@ import Footer from './Layout/Footer/Footer';
 import Recommend from './components/Recommend';
 import Login from './Layout/Body/Login';
 import SignIn from './Layout/Body/SignIn';
-
 import Crawling from './components/Crawling';
+
+import CrawlingResult from './components/CrawlingResult';
 import GetTest from './components/GetTest';
 import LandingPage from './components/views/LandingPage/LandingPage';
 import RecommendResult from './components/RecommendResult';
+import Introduce from './components/views/Introduce/Introduce';
 function App() {
     return (
     
@@ -30,6 +32,9 @@ function App() {
               <Route path='/SignIn' element={<SignIn/>}></Route>
               <Route path='RecommendResult' element={<RecommendResult/>}></Route>
               <Route path='/SignIn' element={<SignIn/>}></Route>
+              <Route path='/CrawlingResult' element={<CrawlingResult/>}></Route>
+              
+              <Route path='/Introduce' element={<Introduce/>}></Route>
             </Routes>
           </div>
           <Footer/>
